@@ -27,7 +27,7 @@
 */
 
 /** C 2011 grammar built from the C11 Spec */
-grammar C;
+grammar C11;
 
 
 primaryExpression

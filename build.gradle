@@ -12,6 +12,12 @@ dependencies {
     compile "org.antlr:antlr4-runtime:4.7.2"
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.ostis.prosem.TranslatorLauncher'
+    }
+}
+
 generateGrammarSource {
-    arguments += ["-visitor", "-package", "org.ostis.prosem"]
+    arguments += ["-package", "org.ostis.prosem"]
 }
