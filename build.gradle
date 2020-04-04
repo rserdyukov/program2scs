@@ -10,6 +10,9 @@ repositories {
 dependencies {
     antlr "org.antlr:antlr4:4.7.2"
     compile "org.antlr:antlr4-runtime:4.7.2"
+    compile "commons-cli:commons-cli:1.4"
+    compile "commons-io:commons-io:2.6"
+    compile "com.google.guava:guava:28.2-jre"
 }
 
 jar {

@@ -29,6 +29,9 @@
 /** C 2011 grammar built from the C11 Spec */
 grammar C11;
 
+compilationUnit
+    :   translationUnit? EOF
+    ;
 
 primaryExpression
     :   Identifier
@@ -522,10 +525,6 @@ jumpStatement
     |   'break' ';'
     |   'return' expression? ';'
     |   'goto' unaryExpression ';' // GCC extension
-    ;
-
-compilationUnit
-    :   translationUnit? EOF
     ;
 
 translationUnit
