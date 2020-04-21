@@ -89,7 +89,9 @@ public class Tree2Dot {
     }
 
     private void convert(Tree tree, final List<String> ruleNames, final String parentNode, final String parentLabel) {
-        String label = getNodeText(tree, ruleNames).replace("\"", "\\\"");
+        String label = getNodeText(tree, ruleNames)
+                .replace("\\", "\\\\")
+                .replace("\"", "\\\"");
         String node = "n" + nodeIndex++;
         if (parentNode != null) {
             builder.append(parentNode).append("->").append(node).append(";");
